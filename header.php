@@ -25,9 +25,9 @@
 				<?php }
 				else{ ?>
 					
-					<a href="views/pg_login.php">Login</a>
+					<a href="?pagina=login">Login</a>
 
-					<a href="views/pg_cadastro.php">Cadastre-se</a>
+					<a href="?pagina=cadastro">Cadastre-se</a>
 					
 				<?php } ?>
 			</div>

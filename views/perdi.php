@@ -3,7 +3,7 @@
 <?php 
 	if (!(isset($_SESSION['login']))) {?>
 		<br>
-		<center><a href="views/pg_login.php" class="badge badge-warning">Para adicionar uma publicação é necessario login</a></button><center>
+		<center><a href="?pagina=login" class="badge badge-warning">Para adicionar uma publicação é necessario login</a></button><center>
 	<?php }else{ ?>
 
 		<center>
