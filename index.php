@@ -26,7 +26,7 @@ switch($pagina){
 	case 'inserir_encontrei': include 'views/inserir_encontrei.php'; break;
 	case 'inserir_perdi': include 'views/inserir_perdi.php'; break;
 	case 'login': include 'views/pg_login.php'; break;
-	case 'cadastro': include 'views/pg_cadastro.php'; break;
+	case 'cadastro': include_once 'views/pg_cadastro.php'; break;
 	default: include 'views/home.php'; break;
 }
 

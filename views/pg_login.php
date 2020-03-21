@@ -1,5 +1,5 @@
 <div id="conteudo" class="container">
-	<form method="post" action="login.php">
+	<form method="post" action="login.php" enctype="multipart/form-data">
 
 		<label class="badge badge-secondary">Usuário:</label>
 		<input type="text" name="usuario" placeholder="Insira o usuário" class="form-control"

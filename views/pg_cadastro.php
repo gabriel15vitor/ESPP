@@ -1,26 +1,12 @@
 <div id="conteudo" class="container">
-	<form name="form" method="post" action="cadastro.php">
+	<form name="form" method="post" action="cadastro.php" enctype="multipart/form-data">
 
 		<label class="badge badge-secondary">Nome completo:</label>
-		<input type="text" name="nome" placeholder="Ex: Wesley dos Santos" class="form-control"
-		<?php
-			if(!empty($_SESSION['value_nome'])){
-				echo "value='".$_SESSION['value_nome']."'";
-				unset($_SESSION['value_nome']);
-			}
-		?>>
+		<input type="text" name="nome" placeholder="Ex: Wesley dos Santos" class="form-control">
 		<br>
 
-
-
 		<label class="badge badge-secondary">Usuário:</label>
-		<input type="text" name="usuario" placeholder="Ex: Wessant" class="form-control"
-		<?php
-			if(!empty($_SESSION['value_usuario'])){
-				echo "value='".$_SESSION['value_usuario']."'";
-				unset($_SESSION['value_usuario']);
-			}
-		?>>
+		<input type="text" name="usuario" placeholder="Ex: Wessant" class="form-control">
 		<br>
 		
 		<?php if(isset($_GET['erro_usuario'])) { ?>
@@ -30,13 +16,7 @@
 		<?php } ?>
 
 		<label class="badge badge-secondary">E-mail:</label>
-		<input type="email" name="email" placeholder="Ex: wessant@exemplo.com" class="form-control"
-		<?php
-			if(!empty($_SESSION['value_email'])){
-				echo "value='".$_SESSION['value_email']."'";
-				unset($_SESSION['value_email']);
-			}
-		?>>
+		<input type="email" name="email" placeholder="Ex: wessant@exemplo.com" class="form-control">
 		<br>		
 
 		<label class="badge badge-secondary">Senha:</label>
