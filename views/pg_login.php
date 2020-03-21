@@ -1,14 +1,7 @@
 <div id="conteudo" class="container">
-	<form method="post" action="login.php" enctype="multipart/form-data">
-
+	<form method="post" action="login.php">
 		<label class="badge badge-secondary">Usuário:</label>
-		<input type="text" name="usuario" placeholder="Insira o usuário" class="form-control"
-		<?php
-			if(!empty($_SESSION['value_usuario'])){
-				echo "value='".$_SESSION['value_usuario']."'";
-				unset($_SESSION['value_usuario']);
-			}
-		?>>
+		<input type="text" name="usuario" placeholder="Insira o usuário" class="form-control">
 		<br>
 
 		<label class="badge badge-secondary">Senha:</label>
@@ -25,5 +18,5 @@
 			<div class="alert alert-danger" role="alert">
 				<center>Usuário e/ou senha inválidos</center>
 			</div>
-		<?php } ?>
+		<?php } //enctype="multipart/form-data"?>
 </div>

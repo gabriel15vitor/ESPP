@@ -33,11 +33,9 @@ class Usuario{
     }
 
     function login($usuario, $senha){
-        $query = "SELECT * from usuarios where usuario=':u' and senha=':s'";
+        $query = "SELECT * from usuarios where usuario='".$usuario."' and senha='".$senha."'";
 
         $prep_query = $this->conn->prepare( $query );
-        $prep_query->bindParam(":u", $usuario);
-        $prep_query->bindParam(":s", $senha);
         $prep_query->execute();
 
         return $prep_query;

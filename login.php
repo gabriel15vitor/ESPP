@@ -8,35 +8,23 @@ $db = $database->getConnection();
 
 $usuarioDAO = new Usuario($db);
 
-$usuario = $_POST['usuario'];
-$senha = $_POST['senha'];
+$user = isset($_POST['usuario']) ? $_POST['usuario'] : null;
+$pass = isset($_POST['senha']) ? $_POST['senha'] : null;
 
-if (is_null($usuario) || is_null($senha)) {
-	header('location:index.php?pagina=login&erro&null');
+$res = $usuarioDAO->login($user, $pass);
+$num = $res->rowCount();
+if (is_null($user) || is_null($pass)) {
+	header('location:index.php?pagina=login&erro');
 }else{
-	$res = $usuarioDAO->login($usuario, $senha);
-	$num = $res->rowCount();
 	if ($num > 0) {
 		session_start();
 		$_SESSION['login'] = true;
-		$_SESSION['usuario'] = $usuario;
+		$_SESSION['usuario'] = $user;
 		header('location:index.php?pagina=home');
 	}else{
-		$_SESSION['value_usuario'] = $usuario;
+		$_SESSION['value_usuario'] = $user;
 		header('location:index.php?pagina=login&erro');
 	}
 }
-/*
-$query = "SELECT * FROM USUARIOS WHERE usuario = '$usuario' and senha = '$senha'";
 
-$consulta = mysqli_query($conexao,$query);
-
-if (mysqli_num_rows($consulta) == 1) {
-	session_start();
-	$_SESSION['login'] = true;
-	$_SESSION['usuario'] = $usuario;
-	header('location:index.php?pagina=home');
-} else{
-}
-*/
 ?>
