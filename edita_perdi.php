@@ -25,5 +25,5 @@ $query = "UPDATE PERDI SET raca_perdi='$raca_perdi', porte_perdi='$porte_perdi',
 
 mysqli_query($conexao, $query);
 
-header('location:index.php?pagina=perdi');
+header('location:index.php?pagina=encontrei');
 ?>

@@ -26,5 +26,5 @@ $query = "UPDATE encontrei SET raca_encontrei='$raca_encontrei', porte_encontrei
 
 mysqli_query($conexao, $query);
 
-header('location:index.php?pagina=encontrei');
+header('location:index.php?pagina=perdi');
 ?>

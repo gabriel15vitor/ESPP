@@ -25,18 +25,9 @@ footer{
 /*.container{ margin: 0 auto; width: 960px; bottom:0;}
 
 /* id */
-#conteudo{ padding:100px 0;}
-
-@media (min-width: 1200px){
-	#menu { float:right; padding: 32px 0; }
-	#menu a{ text-decoration: none; padding: 37px 40px; color: #e3e3e3; text-shadow: 1px 1px 1px #111; }
-	#menu a:hover{ background-color:#44b874; }
-}
-
-@media (max-width: 1199.9px) and (min-width: 720px){
-	#menu { float:right; padding: 32px 0; }
-	#menu a{ text-decoration: none; padding: 0px 0px; color: #e3e3e3; text-shadow: 1px 1px 1px #111; }
-	#menu a:hover{ background-color:#44b874; }
-}
+#conteudo{ padding:100px 0; }
+#menu{ float:right; padding: 32px 0; }
+#menu a{ text-decoration: none; padding: 37px 40px; color: #e3e3e3; text-shadow: 1px 1px 1px #111; }
+#menu a:hover{ background-color:#44b874; }
 
 

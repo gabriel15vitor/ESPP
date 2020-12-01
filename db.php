@@ -7,6 +7,9 @@ $db = "espp";
 
 $conexao = mysqli_connect($servidor, $usuario, $senha, $db);
 
+$query = "SELECT * FROM ADOTA";
+$consulta_adota = mysqli_query($conexao, $query);
+
 $query = "SELECT * FROM PERDI";
 $consulta_perdi = mysqli_query($conexao, $query);
 

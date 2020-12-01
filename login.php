@@ -1,7 +1,7 @@
 <?php 
 
 include 'db.php';
-session_start();
+
 $usuario = addslashes($_POST['usuario']);
 $senha = addslashes($_POST['senha']);
 
@@ -15,7 +15,6 @@ if (mysqli_num_rows($consulta) == 1) {
 	$_SESSION['usuario'] = $usuario;
 	header('location:index.php?pagina=home');
 } else{
-	$_SESSION['value_usuario'] = $usuario;
-	header('location:index.php?pagina=login&erro');
+	header('location:views/pg_login.php?erro');
 }
 ?>

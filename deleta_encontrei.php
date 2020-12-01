@@ -9,3 +9,4 @@ $query = "DELETE FROM encontrei WHERE ID_encontrei = $id_encontrei";
 mysqli_query($conexao, $query);
 
 header('location:index.php?pagina=perdi');
+?>

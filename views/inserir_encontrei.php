@@ -3,7 +3,7 @@
 
 	
 	<div id="conteudo" class="container">
-		<h1>Inserir novo cachorro encontrado</h1>
+		<h1>Inserir novo pet encontrado</h1>
 	<form method="post" action="processa_encontrei.php" enctype="multipart/form-data">
 		<br>
 		<label class="badge badge-secondary">Foto:</label><br>
@@ -50,7 +50,7 @@
 	<?php while($linha = mysqli_fetch_array($consulta_encontrei)){ ?>
 		<?php if($linha['id_encontrei'] == $_GET['editar']){ ?>
 			<div id="conteudo" class="container">
-			<h1>Editar cachorro encontrado</h1>
+			<h1>Editar pet encontrado</h1>
 				<form method="post" action="edita_encontrei.php">
 					<input type="hidden" name="id_encontrei" value="<?php echo $linha['id_encontrei']; ?>">
 					<label class="badge badge-secondary">Raça:</label><br>

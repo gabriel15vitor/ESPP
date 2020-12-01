@@ -3,18 +3,18 @@
 <?php 
 	if (!(isset($_SESSION['login']))) {?>
 		<br>
-		<center><a href="?pagina=login" class="badge badge-warning">Para adicionar uma publicação é necessario login</a></button><center>
+		<center><a href="views/pg_login.php" class="badge badge-warning">Para adicionar uma publicação é necessario login</a></button><center>
 	<?php }else{ ?>
 
 		<center>
 			<br>
-			<a class="btn btn-success" href="?pagina=inserir_perdi">Inserir novo cachorro perdido</a>
+			<a class="btn btn-success" href="?pagina=inserir_perdi">Inserir novo pet perdido</a>
 		</center>
 	<?php } ?>
 
 <br><br><br>
 
-<center><h4><span class="badge badge-secondary">CACHORROS ENCONTRADOS</span></h4></center>
+<center><h4><span class="badge badge-secondary">PETS ENCONTRADOS</span></h4></center>
 
 <br><br>
 
@@ -45,7 +45,7 @@
 			echo '<td>'.$linha['telefone_encontrei'].'</td>';
 		?>
 
-			<td><a href="views/detalhes_encontrei.php?id_encontrei=<?php echo $linha['id_encontrei']; ?>">Detalhes</a></td></tr>
+			<td><a href="index.php?pagina=detalhes_encontrei&id_encontrei=<?php echo $linha['id_encontrei']; ?>">Detalhes</a></td></tr>
 
 		<?php
 			}
